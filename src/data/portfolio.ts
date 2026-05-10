@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Kaustubh Sen',
-  role: 'B.Tech Student · AI & ML',
-  bio: 'Deeply passionate about coding, ethical hacking, and solving real-world problems through AI. Always curious, always building.',
+  role: 'Building intelligent systems that blend AI with real-world impact',
+  bio: 'I engineer AI-first products, backend systems, and automation workflows that move from idea to deployment fast, clean, and scalable.',
   education: 'Gyan Ganga Institute of Technology and Sciences',
   socials: {
     github: 'https://github.com/Kaustubhsenwrks',

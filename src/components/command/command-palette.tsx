@@ -1,0 +1,5 @@
+'use client';
+import * as Dialog from '@radix-ui/react-dialog';
+import { useEffect, useState } from 'react';
+const commands=[['Projects','#projects'],['GitHub','https://github.com/Kaustubh207'],['LinkedIn','https://linkedin.com/in/kaustubhsenwrks'],['Resume','/resume.pdf']];
+export default function CommandPalette(){const [open,setOpen]=useState(false);useEffect(()=>{const on=(e:KeyboardEvent)=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();setOpen(v=>!v);}};window.addEventListener('keydown',on);return()=>window.removeEventListener('keydown',on);},[]);return <Dialog.Root open={open} onOpenChange={setOpen}><Dialog.Portal><Dialog.Overlay className='fixed inset-0 bg-black/70'/><Dialog.Content className='glass fixed left-1/2 top-24 w-[95vw] max-w-xl -translate-x-1/2 p-4'><p className='mb-2 text-cyan'>Command Palette</p>{commands.map(([n,h])=><a className='block rounded p-2 hover:bg-cyan/10' key={String(n)} href={String(h)}>{n}</a>)}</Dialog.Content></Dialog.Portal></Dialog.Root>}

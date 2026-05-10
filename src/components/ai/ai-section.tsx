@@ -1,0 +1,1 @@
+export default function AISection(){const topics=['NLP','Computer Vision','Reinforcement Learning','Generative AI','Intelligent Automation','AI Integrations'];return <section className='section'><h2 className='mb-8 text-3xl font-semibold'>AI Systems Lab</h2><div className='grid gap-3 md:grid-cols-3'>{topics.map(t=><div key={t} className='glass p-4'>{t}</div>)}</div></section>}

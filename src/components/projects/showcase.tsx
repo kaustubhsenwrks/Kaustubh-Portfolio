@@ -1,0 +1,4 @@
+'use client';
+import { projects } from '@/data/portfolio';
+import { motion } from 'framer-motion';
+export default function ProjectShowcase(){return <section id='projects' className='section'><h2 className='mb-8 text-3xl font-semibold'>Cinematic Projects</h2><div className='grid gap-4 md:grid-cols-2'>{projects.map(p=><motion.article key={p.name} whileHover={{scale:1.02}} className='glass p-5'><h3 className='text-xl text-cyan'>{p.name}</h3><p className='text-sm text-white/60 mb-2'>Architecture: Modular services + AI-enhanced workflows.</p><p className='text-sm mb-2'>{p.achievement}</p><div className='flex flex-wrap gap-2 mb-3'>{p.stack.map(s=><span key={s} className='rounded-full border border-cyan/40 px-2 py-0.5 text-xs'>{s}</span>)}</div><div className='flex gap-3 text-sm'><a href={p.github}>GitHub</a><a href={p.demo}>Live Demo</a></div></motion.article>)}</div></section>}

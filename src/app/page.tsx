@@ -9,6 +9,7 @@ import AISection from '@/components/ai/ai-section';
 import AuthorSection from '@/components/author/author-section';
 import CommandPalette from '@/components/command/command-palette';
 import ResumeDownload from '@/components/cinematic/resume-download';
+import ContactSection from '@/components/cinematic/contact-section';
 import { useLenis } from '@/hooks/use-lenis';
 
-export default function Home(){useLenis();return <main><Loader/><CinematicBg/><CommandPalette/><Hero/><div className='section pt-0'><ResumeDownload/></div><LiveStats/><Timeline/><ProjectShowcase/><AISection/><AuthorSection/></main>}
+export default function Home(){useLenis();return <main><Loader/><CinematicBg/><CommandPalette/><Hero/><div className='section pt-0'><ResumeDownload/></div><LiveStats/><Timeline/><ProjectShowcase/><AISection/><AuthorSection/><ContactSection/></main>}
